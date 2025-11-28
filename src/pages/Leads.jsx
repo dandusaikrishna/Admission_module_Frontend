@@ -34,12 +34,12 @@ export default function Leads() {
     
     document.addEventListener('visibilitychange', handleVisibilityChange)
     
-    // Also refresh every 10 seconds to catch payment updates
-    const refreshInterval = setInterval(fetchLeads, 10000)
+    // // Also refresh every 10 seconds to catch payment updates
+    // const refreshInterval = setInterval(fetchLeads, 10000)
     
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange)
-      clearInterval(refreshInterval)
+      // clearInterval(refreshInterval)
     }
   }, [])
 
