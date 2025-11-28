@@ -313,6 +313,13 @@ export default function LeadDetail() {
                         <p className="text-xs font-medium text-gray-900 mt-1">{lead?.counselor_email || '-'}</p>
                       </div>
                     </div>
+                    <div className="flex items-start gap-3">
+                      <Phone className="w-4 h-4 text-indigo-600 mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="text-xs text-gray-600 font-medium uppercase tracking-wide">Phone Number</p>
+                        <p className="text-xs font-medium text-gray-900 mt-1">{lead?.counselor_phone || '-'}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
