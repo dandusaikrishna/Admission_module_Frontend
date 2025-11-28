@@ -34,12 +34,12 @@ export default function Leads() {
     
     document.addEventListener('visibilitychange', handleVisibilityChange)
     
-    // Also refresh every 10 seconds to catch payment updates
-    const refreshInterval = setInterval(fetchLeads, 10000)
+    // // Also refresh every 10 seconds to catch payment updates
+    // const refreshInterval = setInterval(fetchLeads, 10000)
     
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange)
-      clearInterval(refreshInterval)
+      // clearInterval(refreshInterval)
     }
   }, [])
 
@@ -190,7 +190,7 @@ export default function Leads() {
           <div className="flex items-center justify-between flex-wrap gap-4 mb-6">
             <div>
               <h1 className="text-base font-bold text-gray-900">
-                👥 All Leadsd
+                👥 All Leads
               </h1>
               <p className="text-xs text-gray-600 font-medium">View and manage all student applications</p>
             </div>
