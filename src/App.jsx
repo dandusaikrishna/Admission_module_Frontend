@@ -7,6 +7,8 @@ import LeadDetail from './pages/LeadDetail'
 import Courses from './pages/Courses'
 import Payments from './pages/Payments'
 import Reviews from './pages/Reviews'
+import Counsellors from './pages/Counsellors'
+import CounsellorDetail from './pages/CounsellorDetail'
 
 export default function App() {
   useEffect(() => {
@@ -22,6 +24,8 @@ export default function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/leads" element={<Leads />} />
             <Route path="/leads/:id" element={<LeadDetail />} />
+            <Route path="/counsellors" element={<Counsellors />} />
+            <Route path="/counsellors/:id" element={<CounsellorDetail />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/payments" element={<Payments />} />
             <Route path="/reviews" element={<Reviews />} />

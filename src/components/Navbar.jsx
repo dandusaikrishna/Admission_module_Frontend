@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, LayoutDashboard, Users, BookOpen, CreditCard, MessageSquare, Settings } from 'lucide-react'
+import { Menu, X, LayoutDashboard, Users, BookOpen, CreditCard, MessageSquare, Settings, UserCheck } from 'lucide-react'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -19,11 +19,12 @@ export default function Navbar() {
     setIsMenuOpen(false)
   }, [location])
 
-  const isActive = (path) => location.pathname === path
+  const isActive = (path) => location.pathname === path || location.pathname.startsWith(path + '/')
 
   const navItems = [
     { label: 'Dashboard', path: '/', icon: LayoutDashboard },
     { label: 'Leads', path: '/leads', icon: Users },
+    { label: 'Counsellors', path: '/counsellors', icon: UserCheck },
     { label: 'Courses', path: '/courses', icon: BookOpen },
     { label: 'Payments', path: '/payments', icon: CreditCard },
     { label: 'Application Reviews', path: '/reviews', icon: MessageSquare },
