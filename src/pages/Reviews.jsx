@@ -150,7 +150,6 @@ export default function Reviews() {
                     <th className="px-3 py-2 text-left text-xs font-semibold text-gray-700">Phone</th>
                     <th className="px-3 py-2 text-left text-xs font-semibold text-gray-700">Education</th>
                     <th className="px-3 py-2 text-left text-xs font-semibold text-gray-700">Counselor</th>
-                    <th className="px-3 py-2 text-left text-xs font-semibold text-gray-700">Payment</th>
                     <th className="px-3 py-2 text-left text-xs font-semibold text-gray-700">Status</th>
                     <th className="px-3 py-2 text-left text-xs font-semibold text-gray-700">Joined</th>
                     <th className="px-3 py-2 text-left text-xs font-semibold text-gray-700">Action</th>
@@ -171,15 +170,6 @@ export default function Reviews() {
                       <td className="px-3 py-2 text-gray-700 text-xs">{lead.phone || '-'}</td>
                       <td className="px-3 py-2 text-gray-700 text-xs">{lead.education || '-'}</td>
                       <td className="px-3 py-2 text-gray-700 text-xs truncate" title={lead.counselor_name || 'Unassigned'}>{lead.counselor_name || '-'}</td>
-                      <td className="px-3 py-2">
-                        <span className={`inline-flex px-2 py-0.5 text-xs font-semibold rounded ${
-                          lead.registration_fee_status === 'PAID'
-                            ? 'bg-green-100 text-green-800'
-                            : 'bg-orange-100 text-orange-800'
-                        }`}>
-                          {lead.registration_fee_status === 'PAID' ? '✓ Paid' : '⏳ Pend'}
-                        </span>
-                      </td>
                       <td className="px-3 py-2">{getStatusBadge(lead.application_status)}</td>
                       <td className="px-3 py-2 text-gray-700 text-xs">
                         {new Date(lead.created_at).toLocaleDateString()}
